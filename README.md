@@ -3,12 +3,10 @@ Please go under edit and edit this file as needed for your project
 
 # Team Name - 
 # Project Group - 
-### Group Leader - IT21169212 - Wanshathilaka M.A.T.M
-### Member 2 - 
-### Member 3 - 
-### Member 4 - 
+### Group Leader - IT21169212 - Wanshathilaka M.A.T.M [TharakaMadushankaWanshathilaka](https://github.com/TharakaMadushankaWanshathilaka)
+### Member 2 - IT21179280 GUNATHILAKE L.A.K.T
+### Member 3 - IT21159862 Nanayakkara G.P.D.P
+### Member 4 - IT21186288 Wennawaththa W.W.V.N
 
-#### Brief Description of your Solution - 
-
-Note - The student's github account should be given in brackets e.g. (asiriRepos), this ideally should be your student id 
+#### Brief Description of your Solution - <TBD>
 
