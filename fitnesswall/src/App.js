@@ -1,14 +1,14 @@
-import './App.css';
 import { Route, Routes } from 'react-router-dom';
-import { HomePage } from './components/HomePage/HomePage';
-import { Authentiction } from './components/Authentication/Authentiction';
+import './App.css';
+import Authentication from './Components/Authentication/Authentication';
+import HomePage from './Components/HomePage/HomePage';
 
 function App() {
   return (
     <div className="">
 
       <Routes>
-        <Route path="/" element={true?<HomePage/>:<Authentiction/>}>
+        <Route path="/" element={true? <HomePage/>:<Authentication></Authentication>}>
 
         </Route>
       </Routes>
