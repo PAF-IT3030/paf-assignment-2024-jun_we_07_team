@@ -7,6 +7,7 @@ import FmdGoodIcon from '@mui/icons-material/FmdGood'
 import TagFacesIcon from '@mui/icons-material/TagFaces'
 import { Button } from '@mui/material'
 import { createTheme, ThemeProvider } from "@mui/material/styles";
+import PostCard from './PostCard'
 
 //Create Mui Custom Theme
 const theme = createTheme({
@@ -107,7 +108,7 @@ const HomeSection = () => {
             </div>
         </section>
         <section>
-            
+            <PostCard/>
         </section>
     </div>
   )
