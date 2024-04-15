@@ -47,18 +47,21 @@ const PostCard = () => {
 
   return (
     <div className=''>
+        {/*
         <div className='flex items-center font-semibold text-gray-700 py-2'>
             <RepeatIcon/>
             <p>
                 You Repost
             </p>
         </div>
+        */}
+
         <div className='flex space-x-5'>
             <Avatar
-                onClick={() => navigate('/profile/${5}')}
+                onClick={() => navigate('/profile/${6}')}
                 className='cursor-pointer'
                 alt="username"
-                src="UserAvatar.png"
+                src="/UserAvatar.png"
             />
             <div className='w-full'>
                 <div className='flex justify-between items-center'>
@@ -93,12 +96,12 @@ const PostCard = () => {
                     </div>
                 </div>
                 <div className='mt-2'>
-                    <div className='cursor-pointer'>
+                    <div onClick={()=>navigate(`/post/${3}`)} className='cursor-pointer'>
                         <p className='mb-2 p-0'>
                             Social Media App - Full Stack Project with Springboot & React
                         </p>
                         <img className='w-[28rem] border border-gray-400 p-5 rounded-md'
-                        src="UserPost.png" alt="User Post" />
+                        src="/UserPost.png" alt="User Post" />
                     </div>
                     <div className='py-5 flex flex-wrap justify-between items-center'>                
                         <div className={

@@ -10,6 +10,8 @@ import Tab from '@mui/material/Tab';
 import TabContext from '@mui/lab/TabContext';
 import TabList from '@mui/lab/TabList';
 import TabPanel from '@mui/lab/TabPanel';
+import PostCard from '../HomeSection/PostCard';
+import ProfileModel from './ProfileModel';
 
 const Profile = () => {
 
@@ -40,7 +42,7 @@ const Profile = () => {
 
   return (
     <div>
-        <section className={`z-50 flex items-center sticky top-0 bg-opacity-95`}>            
+        <section className={`bg-white z-50 flex items-center sticky top-0 bg-opacity-95`}>            
             <KeyboardBackspaceIcon
                 className='cursor-pointer'
                 onClick={handleBack}
@@ -133,7 +135,7 @@ const Profile = () => {
                 </div>
             </div>
         </section>
-        <section>
+        <section className='py-5'>
             <Box sx={{ width: '100%', typography: 'body1' }}>
                 <TabContext value={tabValue}>
                     <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
@@ -144,12 +146,17 @@ const Profile = () => {
                         <Tab label="Likes" value="4" />
                     </TabList>
                     </Box>
-                    <TabPanel value="1">Users Posts</TabPanel>
+                    <TabPanel value="1">
+                        {[1,1,1,1].map ((item)=> <PostCard/>)}
+                    </TabPanel>
                     <TabPanel value="2">Users Replies</TabPanel>
                     <TabPanel value="3">Users Media</TabPanel>
                     <TabPanel value="4">Users Likes</TabPanel>
                 </TabContext>
             </Box>
+        </section>
+        <section>
+            <ProfileModel/>
         </section>
     </div>
   )
