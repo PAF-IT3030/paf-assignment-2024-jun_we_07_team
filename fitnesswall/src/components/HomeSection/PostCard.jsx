@@ -6,7 +6,11 @@ import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import MoreHorizIcon from "@mui/icons-material/MoreHoriz";
 import Button from "@mui/material/Button";
-
+import ChatBubbleOutlineIcon from '@mui/icons-material/ChatBubbleOutline';
+import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
+import FileUploadIcon from '@mui/icons-material/FileUpload';
+import BarChartIcon from '@mui/icons-material/BarChart';
+import FavoriteIcon from '@mui/icons-material/Favorite';
 
 const PostCard = () => {
     const navigate = useNavigate();
@@ -23,6 +27,22 @@ const PostCard = () => {
     const handleDeletePost=() => {
         console.log("Delete Post")
         handleClose();
+    }
+
+    const handleOpenReplyMode=() =>{
+        console.log("Open Modle")
+    }
+
+    const handleCreateRepost=() => {
+        console.log("Create Repost")
+    }
+
+    const handleEditPost=() => {
+        console.log("Handle Edit Post")
+    }
+
+    const handleLikePost=() => {
+        console.log("Handle Like Post")
     }
 
   return (
@@ -67,8 +87,53 @@ const PostCard = () => {
                         }}
                         >
                             <MenuItem onClick={handleDeletePost}>Delete</MenuItem>
+                            <MenuItem onClick={handleEditPost}>Edit</MenuItem> {/*change handleEditPost to later time*/}
                         </Menu>
-                        
+
+                    </div>
+                </div>
+                <div className='mt-2'>
+                    <div className='cursor-pointer'>
+                        <p className='mb-2 p-0'>
+                            Social Media App - Full Stack Project with Springboot & React
+                        </p>
+                        <img className='w-[28rem] border border-gray-400 p-5 rounded-md'
+                        src="UserPost.png" alt="User Post" />
+                    </div>
+                    <div className='py-5 flex flex-wrap justify-between items-center'>                
+                        <div className={
+                            `${true? "text-pink-600":"text-gray-600"}
+                             space-x-3 flex items-center`}>
+                            {true?
+                            <FavoriteIcon
+                            onClick={handleLikePost}
+                            className='cursor-pointer'/>
+                            :<FavoriteBorderIcon
+                            onClick={handleLikePost}
+                            className='cursor-pointer'/>}
+                            <p>80</p>
+                        </div>
+                        <div className='space-x-3 flex items-center text-gray-600'>
+                            <ChatBubbleOutlineIcon
+                            className='cursor-pointer'
+                            onClick={handleOpenReplyMode}/>
+                            <p>50</p>
+                        </div>
+                        <div className={
+                            `${true? "text-pink-600":"text-gray-600"}
+                             space-x-3 flex items-center`}>
+                            <RepeatIcon
+                            onClick={handleCreateRepost}
+                            className='cursor-pointer'/>
+                            <p>20</p>
+                        </div>
+                        <div className='space-x-3 flex items-center text-gray-600'>
+                            <BarChartIcon className='cursor-pointer' onClick={handleOpenReplyMode}/>
+                            <p>450</p>
+                        </div>
+                        <div className='space-x-3 flex items-center text-gray-600'>
+                            <FileUploadIcon className='cursor-pointer' onClick={handleOpenReplyMode}/>
+                        </div>
                     </div>
                 </div>
             </div>

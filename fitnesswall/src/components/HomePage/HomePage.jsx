@@ -2,6 +2,7 @@ import { Grid } from '@mui/material'
 import React from 'react'
 import Navigation from '../Navigation/Navigation'
 import HomeSection from '../HomeSection/HomeSection'
+import RightPanel from '../RightPanel/RightPanel'
 
 function HomePage() {
   return (
@@ -13,7 +14,7 @@ function HomePage() {
             <HomeSection/>
         </Grid>
         <Grid item xs={0} lg={3} className='hidden lg:block w-full relative'>
-            <p>Right</p>
+            <RightPanel/>
         </Grid>
     </Grid>
   )

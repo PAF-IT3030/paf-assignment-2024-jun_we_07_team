@@ -108,7 +108,7 @@ const HomeSection = () => {
             </div>
         </section>
         <section>
-            <PostCard/>
+            {[1,1,1,1,1].map((item)=><PostCard/>)}
         </section>
     </div>
   )
