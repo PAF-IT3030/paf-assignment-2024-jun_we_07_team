@@ -45,7 +45,7 @@ function Navigation() {
     <div className="h-screen sticky top-0">
       <div>
         <div className="py-5">
-          <img src="logo.png" alt="logo" height={50} width={50} />
+          <img src="../logo.png" alt="logo" height={50} width={50} />
         </div>
         <div className="space-y-6">
           {navigationMenu.map((item) => (
@@ -82,7 +82,7 @@ function Navigation() {
 
       <div className="flex items-center justify-between">
         <div className="flex items-center space-x-3">
-          <Avatar alt="username" src="UserAvatar.png" />
+          <Avatar alt="username" src="/UserAvatar.png" />
         </div>
         <div>
           <span>Tharaka Madushanka Wanshathilaka</span>
@@ -107,7 +107,7 @@ function Navigation() {
             "aria-labelledby": "basic-button",
           }}
         >
-                    <MenuItem onClick={handleLogout}>Logout</MenuItem>
+          <MenuItem onClick={handleLogout}>Logout</MenuItem>
         </Menu>
       </div>
     </div>

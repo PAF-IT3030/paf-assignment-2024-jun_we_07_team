@@ -55,7 +55,7 @@ const PostCard = () => {
         </div>
         <div className='flex space-x-5'>
             <Avatar
-                onClick={() => navigate('/profile/${6}')}
+                onClick={() => navigate('/profile/${5}')}
                 className='cursor-pointer'
                 alt="username"
                 src="UserAvatar.png"
@@ -65,7 +65,7 @@ const PostCard = () => {
                     <div className='flex cursor-pointer items-center space-x-2'>
                         <span className='font-semibold'>Tharaka Madushanka Wanshathilaka</span>
                         <span className='text-gray-600'>@TheLionKIng .2m</span>
-                        <img className='ml-2 w-5 h-5' src="verified.png" alt="Profile Varification Icon" />
+                        <img className='ml-2 w-5 h-5' src="/verified.png" alt="Profile Varification Icon" />
                     </div>
                     <div>
                     <Button
