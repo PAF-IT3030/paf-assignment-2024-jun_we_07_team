@@ -68,7 +68,7 @@ function Navigation() {
             <Button
               sx={{
                 width: "100%",
-                borderRadius: "30px",
+                borderRadius: "29px",
                 py: "15px",
                 bgcolor: "#05c653",
               }}
@@ -82,33 +82,32 @@ function Navigation() {
 
       <div className="flex items-center justify-between">
         <div className="flex items-center space-x-3">
-          <Avatar alt="username" src="/UserAvatar.png" />
+          <Avatar alt="username" src="/UserAvatar.png" />        
+          <div>
+            <span>Tharaka Madushanka Wanshathilaka</span>
+            <span className="opacity-70">@TheLionKing</span>
+          </div>
+          <Button
+            id="basic-button"
+            aria-controls={open ? "basic-menu" : undefined}
+            aria-haspopup="true"
+            aria-expanded={open ? "true" : undefined}
+            onClick={handleClick}
+          >
+            <MoreHorizIcon />
+          </Button>
+          <Menu
+            id="basic-menu"
+            anchorEl={anchorEl}
+            open={open}
+            onClose={handleClose}
+            MenuListProps={{
+              "aria-labelledby": "basic-button",
+            }}
+          >
+            <MenuItem onClick={handleLogout}>Logout</MenuItem>
+          </Menu>
         </div>
-        <div>
-          <span>Tharaka Madushanka Wanshathilaka</span>
-          <span className="opacity-70">@TheLionKing</span>
-        </div>
-
-        <Button
-          id="basic-button"
-          aria-controls={open ? "basic-menu" : undefined}
-          aria-haspopup="true"
-          aria-expanded={open ? "true" : undefined}
-          onClick={handleClick}
-        >
-          <MoreHorizIcon />
-        </Button>
-        <Menu
-          id="basic-menu"
-          anchorEl={anchorEl}
-          open={open}
-          onClose={handleClose}
-          MenuListProps={{
-            "aria-labelledby": "basic-button",
-          }}
-        >
-          <MenuItem onClick={handleLogout}>Logout</MenuItem>
-        </Menu>
       </div>
     </div>
   );

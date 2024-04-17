@@ -7,7 +7,7 @@ import { Route, Routes } from 'react-router-dom'
 import Profile from '../Profile/Profile'
 import PostDetails from '../PostDetails/PostDetails'
 
-function HomePage() {
+const HomePage = () => {
   return (
     <Grid container xs={12} className='px-5 lg:px-36 justify-between'>
         <Grid item xs={0} lg={2.5} className='hidden lg:block w-full relative'>
