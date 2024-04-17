@@ -3,8 +3,13 @@ import SearchIcon from '@mui/icons-material/Search';
 import Brightness4Icon from '@mui/icons-material/Brightness4';
 import { Button } from '@mui/material';
 import MoreHorizIcon from '@mui/icons-material/MoreHoriz';
+import SubscriptionModal from '../SubscriptionModal/SubscriptionModal';
 
 const RightPanel = () => {
+
+    const [openSubscriptionModal, setOpenSubscriptionModal] = React.useState(false);
+    const handleOpenSubscriptionModal = () => setOpenSubscriptionModal(true);
+    const handleCloseSubscriptionModal = () => setOpenSubscriptionModal(false);
 
     const handleChangeTheme=() =>{
         console.log("Handle Change Theme")
@@ -32,6 +37,7 @@ const RightPanel = () => {
                 Subscribe to Unlock New Features
             </h1>
             <Button
+            onClick={handleOpenSubscriptionModal}
             variant='contatined'
             sx={{padding:"10px",
                 paddingX:"20px",
@@ -68,6 +74,9 @@ const RightPanel = () => {
                     <MoreHorizIcon/>
                 </div>
             )}
+        </section>
+        <section>
+            <SubscriptionModal open={openSubscriptionModal} handleClose={handleCloseSubscriptionModal}/>
         </section>
     </div>
   )

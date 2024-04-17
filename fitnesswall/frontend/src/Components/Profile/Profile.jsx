@@ -85,7 +85,7 @@ const Profile = () => {
                     <h1 className='font-bold text-lg'>
                         Tharaka Madushanka Wanshathilaka
                     </h1>
-                    {true && <img className='ml-2 w-5 h-5' src="/verified.png" alt="Profile Varification Icon" />}
+                    {true && <img className='ml-2 w-5 h-5' src="../verified.png" alt="Profile Varification Icon" />}
                 </div>
                 <h1 className='text-gray-500'>
                     @TheLionKing
