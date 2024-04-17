@@ -19,9 +19,9 @@ const Profile = () => {
     
     const handleBack = () => navigate(-1);
 
-    const handleOpenProfileModel=() =>{
-        console.log("Open Profile Model")
-    }
+    const [openProfileModel, setOpenProfileModel] = useState(false);
+    const handleOpenProfileModel = () => setOpenProfileModel(true);
+    const handleClose = () => setOpenProfileModel(false);
 
     const handleFollowUser=() =>{
         console.log("Handle Follow User")
@@ -156,7 +156,7 @@ const Profile = () => {
             </Box>
         </section>
         <section>
-            <ProfileModel/>
+            <ProfileModel handleClose={handleClose} open={openProfileModel}/>
         </section>
     </div>
   )

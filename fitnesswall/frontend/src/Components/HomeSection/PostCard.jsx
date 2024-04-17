@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import RepeatIcon from '@mui/icons-material/Repeat'
 import { Avatar } from '@mui/material'
 import { useNavigate } from 'react-router-dom'
@@ -11,12 +11,18 @@ import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import FileUploadIcon from '@mui/icons-material/FileUpload';
 import BarChartIcon from '@mui/icons-material/BarChart';
 import FavoriteIcon from '@mui/icons-material/Favorite';
+import ReplyModel from './ReplyModel';
 
 const PostCard = () => {
     const navigate = useNavigate();
 
     const [anchorEl, setAnchorEl] = React.useState(null);
     const open = Boolean(anchorEl);
+
+    const [openReplyModel, setOpenReplyModel] = useState(false);
+    const handleOpenReplyModel = () => setOpenReplyModel(true);
+    const handleCloseReplyModel = () => setOpenReplyModel(false);
+
     const handleClick = (event) => {
         setAnchorEl(event.currentTarget);
     };
@@ -27,10 +33,6 @@ const PostCard = () => {
     const handleDeletePost=() => {
         console.log("Delete Post")
         handleClose();
-    }
-
-    const handleOpenReplyMode=() =>{
-        console.log("Open Modle")
     }
 
     const handleCreateRepost=() => {
@@ -46,7 +48,7 @@ const PostCard = () => {
     }
 
   return (
-    <div className=''>
+    <React.Fragment>
         {/*
         <div className='flex items-center font-semibold text-gray-700 py-2'>
             <RepeatIcon/>
@@ -119,7 +121,7 @@ const PostCard = () => {
                         <div className='space-x-3 flex items-center text-gray-600'>
                             <ChatBubbleOutlineIcon
                             className='cursor-pointer'
-                            onClick={handleOpenReplyMode}/>
+                            onClick={handleOpenReplyModel}/>
                             <p>50</p>
                         </div>
                         <div className={
@@ -131,17 +133,20 @@ const PostCard = () => {
                             <p>20</p>
                         </div>
                         <div className='space-x-3 flex items-center text-gray-600'>
-                            <BarChartIcon className='cursor-pointer' onClick={handleOpenReplyMode}/>
+                            <BarChartIcon className='cursor-pointer'/>
                             <p>450</p>
                         </div>
                         <div className='space-x-3 flex items-center text-gray-600'>
-                            <FileUploadIcon className='cursor-pointer' onClick={handleOpenReplyMode}/>
+                            <FileUploadIcon className='cursor-pointer'/>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+        <section>
+            <ReplyModel open={openReplyModel} handleClose={handleCloseReplyModel}/>
+        </section>
+    </React.Fragment>
   )
 }
 
