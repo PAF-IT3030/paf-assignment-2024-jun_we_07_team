@@ -11,7 +11,7 @@ import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import FileUploadIcon from '@mui/icons-material/FileUpload';
 import BarChartIcon from '@mui/icons-material/BarChart';
 import FavoriteIcon from '@mui/icons-material/Favorite';
-import ReplyModel from './ReplyModel';
+import ReplyModal from './ReplyModal';
 
 const PostCard = () => {
     const navigate = useNavigate();
@@ -19,9 +19,9 @@ const PostCard = () => {
     const [anchorEl, setAnchorEl] = React.useState(null);
     const open = Boolean(anchorEl);
 
-    const [openReplyModel, setOpenReplyModel] = useState(false);
-    const handleOpenReplyModel = () => setOpenReplyModel(true);
-    const handleCloseReplyModel = () => setOpenReplyModel(false);
+    const [openReplyModal, setOpenReplyModal] = useState(false);
+    const handleOpenReplyModal = () => setOpenReplyModal(true);
+    const handleCloseReplyModal = () => setOpenReplyModal(false);
 
     const handleClick = (event) => {
         setAnchorEl(event.currentTarget);
@@ -121,7 +121,7 @@ const PostCard = () => {
                         <div className='space-x-3 flex items-center text-gray-600'>
                             <ChatBubbleOutlineIcon
                             className='cursor-pointer'
-                            onClick={handleOpenReplyModel}/>
+                            onClick={handleOpenReplyModal}/>
                             <p>50</p>
                         </div>
                         <div className={
@@ -144,7 +144,7 @@ const PostCard = () => {
             </div>
         </div>
         <section>
-            <ReplyModel open={openReplyModel} handleClose={handleCloseReplyModel}/>
+            <ReplyModal open={openReplyModal} handleClose={handleCloseReplyModal}/>
         </section>
     </React.Fragment>
   )

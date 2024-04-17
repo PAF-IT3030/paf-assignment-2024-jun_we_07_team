@@ -11,7 +11,7 @@ import TabContext from '@mui/lab/TabContext';
 import TabList from '@mui/lab/TabList';
 import TabPanel from '@mui/lab/TabPanel';
 import PostCard from '../HomeSection/PostCard';
-import ProfileModel from './ProfileModel';
+import ProfileModal from './ProfileModal';
 
 const Profile = () => {
 
@@ -19,9 +19,9 @@ const Profile = () => {
     
     const handleBack = () => navigate(-1);
 
-    const [openProfileModel, setOpenProfileModel] = useState(false);
-    const handleOpenProfileModel = () => setOpenProfileModel(true);
-    const handleClose = () => setOpenProfileModel(false);
+    const [openProfileModal, setOpenProfileModal] = useState(false);
+    const handleOpenProfileModal = () => setOpenProfileModal(true);
+    const handleClose = () => setOpenProfileModal(false);
 
     const handleFollowUser=() =>{
         console.log("Handle Follow User")
@@ -64,7 +64,7 @@ const Profile = () => {
                 />
                 {true?
                 <Button
-                onClick={handleOpenProfileModel}
+                onClick={handleOpenProfileModal}
                 variant='contained'
                 sx={{borderRadius:"20px"}}
                 >
@@ -156,7 +156,7 @@ const Profile = () => {
             </Box>
         </section>
         <section>
-            <ProfileModel handleClose={handleClose} open={openProfileModel}/>
+            <ProfileModal handleClose={handleClose} open={openProfileModal}/>
         </section>
     </div>
   )

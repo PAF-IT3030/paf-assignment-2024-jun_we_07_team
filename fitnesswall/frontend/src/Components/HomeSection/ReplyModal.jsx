@@ -40,7 +40,7 @@ const style = {
   borderRadius: 4
 };
 
-export default function ReplyModel({handleClose, open}) {
+export default function ReplyModal({handleClose, open}) {
 
     const navigate = useNavigate()
 
