@@ -1,0 +1,92 @@
+.mealPost {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .content {
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+    form {
+      margin-bottom: 20px;
+      label {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: bold;
+      }
+
+      input[type="text"],
+      select {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 16px;
+      }
+
+      button[type="submit"] {
+        padding: 10px 20px;
+        background-color: #4caf50;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+        transition: background-color 0.3s;
+        
+        &:hover {
+          background-color: #45a049;
+        }
+      }
+    }
+
+    .meal {
+      padding: 15px;
+      margin-bottom: 15px;
+      background-color: #f3f3f3;
+      border-radius: 5px;
+
+      h2 {
+        margin-bottom: 10px;
+        font-size: 20px;
+      }
+
+      p {
+        margin-bottom: 5px;
+      }
+
+      .actions {
+        margin-top: 10px;
+
+        button {
+          padding: 8px 15px;
+          margin-right: 10px;
+          background-color: #2196f3;
+          color: #fff;
+          border: none;
+          border-radius: 5px;
+          cursor: pointer;
+          font-size: 14px;
+          transition: background-color 0.3s;
+
+          &:last-child {
+            margin-right: 0;
+          }
+
+          &:hover {
+            background-color: #0b7dda;
+          }
+        }
+      }
+    }
+  }
+}
