@@ -1,13 +1,14 @@
-package com.paf.apigatway;
+package com.paf.userservice;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+
 @SpringBootApplication
-public class ApiGatwayApplication {
+public class UserServiceApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(ApiGatwayApplication.class, args);
+		SpringApplication.run(UserServiceApplication.class, args);
 	}
 
 }
