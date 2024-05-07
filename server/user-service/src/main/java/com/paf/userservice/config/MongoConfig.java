@@ -11,7 +11,7 @@ public class MongoConfig {
     @Bean
     public MongoTemplate mongoTemplate() {
 
-        String connectionString = "mongodb+srv://isuru:1234@atlascluster.l6f8mrt.mongodb.net/ITPM?retryWrites=true&w=majority&appName=AtlasCluster";
+        String connectionString = "mongodb+srv://kaveeshagunathilaka99:1234@cluster0.8dscuig.mongodb.net/PAF?retryWrites=true&w=majority&appName=Cluster0";
 
         return new MongoTemplate(new SimpleMongoClientDatabaseFactory(connectionString));
     }
