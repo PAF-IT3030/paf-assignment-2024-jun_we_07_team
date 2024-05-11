@@ -31,15 +31,13 @@ const LeftBar = () => {
             />
             <span>{currentUser.name}</span>
           </div>
+          <Link to="/workout" className="item">
           <div className="item">
-            <img src={Friends} alt="" />
-            <span>Followers</span>
-          </div>
-         
-          <Link to="/workoutnav" className="item">
             <img src={Groups} alt="" />
-            <span>Workout</span>
+            <span>Workout Plan</span>
+          </div>
           </Link>
+
           <Link to="/mealPlanHome" className="item">
             <img src={Market} alt="" />
             <span>Meal Plan</span>
@@ -54,31 +52,7 @@ const LeftBar = () => {
           </div>
         </div>
         <hr />
-        <div className="menu">
-          <span>Your shortcuts</span>
-          
-          <div className="item">
-            <img src={Gallery} alt="" />
-            <span>Gallery</span>
-          </div>
-          <div className="item">
-            <img src={Videos} alt="" />
-            <span>Videos</span>
-          </div>
-          <div className="item">
-            <img src={Messages} alt="" />
-            <span>Messages</span>
-          </div>
-        </div>
-        <hr />
-        <div className="menu">
-          <span>Others</span>
-          
-          <div className="item">
-            <img src={Courses} alt="" />
-            <span>Calendar</span>
-          </div>
-        </div>
+       
       </div>
     </div>
   );
