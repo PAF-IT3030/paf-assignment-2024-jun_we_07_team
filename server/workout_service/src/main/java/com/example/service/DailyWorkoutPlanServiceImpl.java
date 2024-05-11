@@ -57,5 +57,10 @@ public class DailyWorkoutPlanServiceImpl implements DailyWorkoutPlanService {
     public void deleteDailyWorkoutPlan(String id) {
         dailyworkoutPlanRepository.deleteById(id);
     }
+
+    @Override
+    public DailyWorkoutPlan findByUserId(String userId) {
+        return dailyworkoutPlanRepository.findByUserId(userId);
+    }
     
 }

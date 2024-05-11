@@ -15,7 +15,7 @@ public class DailyWorkoutPlan {
     @Id
     private String id;
 
-    private Long userId;
+    private String userId;
     private String title;
     private String description;
     private String type;

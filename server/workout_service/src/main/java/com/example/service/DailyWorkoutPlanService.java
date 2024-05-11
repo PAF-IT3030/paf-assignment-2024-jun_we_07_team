@@ -15,6 +15,8 @@ public interface DailyWorkoutPlanService {
     DailyWorkoutPlan getDailyWorkoutPlanById(String id);
     DailyWorkoutPlan updateDailyWorkoutPlan(String id, DailyWorkoutPlan dailyworkoutPlan);
     void deleteDailyWorkoutPlan(String id);
+    DailyWorkoutPlan findByUserId(String userId);
+
     
     
 }

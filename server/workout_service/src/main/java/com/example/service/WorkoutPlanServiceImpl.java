@@ -51,8 +51,8 @@ public class WorkoutPlanServiceImpl implements WorkoutPlanService {
     }
 
     @Override
-    public void deleteWorkoutPlan(String id) {
-        workoutPlanRepository.deleteById(id);
+    public void deleteWorkoutPlan(String userId) {
+        workoutPlanRepository.deleteById(userId);
     }
     
 }

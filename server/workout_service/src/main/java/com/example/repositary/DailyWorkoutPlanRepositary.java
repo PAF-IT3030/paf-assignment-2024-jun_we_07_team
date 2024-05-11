@@ -6,6 +6,7 @@ import com.example.entity.DailyWorkoutPlan;
 
 
 public interface DailyWorkoutPlanRepositary extends MongoRepository<DailyWorkoutPlan , String> {
+    DailyWorkoutPlan findByUserId(String userId);
 
     
 } 
