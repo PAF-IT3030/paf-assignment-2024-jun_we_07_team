@@ -1,0 +1,44 @@
+/* DailyWorkout.scss */
+
+$primary-color: #007bff;
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+
+  .title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+
+  .description {
+    margin-bottom: 20px;
+  }
+
+  .type,
+  .difficulty,
+  .duration,
+  .weight,
+  .date,
+  .exercise-list,
+  .exercise-item {
+    margin-bottom: 10px;
+  }
+
+  input[type="text"],
+  input[type="number"],
+  button {
+    margin-right: 10px;
+    margin-bottom: 10px;
+  }
+
+  button {
+    background-color: $primary-color;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+}
