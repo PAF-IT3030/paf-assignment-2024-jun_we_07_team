@@ -52,7 +52,7 @@ const MealPlanForm = () => {
           name="description"
           value={formData.description}
           onChange={handleChange}
-          className="input-field"
+          className="input-field" required
         />
         <input
           type="text"
@@ -60,7 +60,7 @@ const MealPlanForm = () => {
           name="recipe"
           value={formData.recipe}
           onChange={handleChange}
-          className="input-field"
+          className="input-field" required
         />
         <input
           type="text"
@@ -68,13 +68,13 @@ const MealPlanForm = () => {
           name="nutritionalInformation"
           value={formData.nutritionalInformation}
           onChange={handleChange}
-          className="input-field"
+          className="input-field" required
         />
         <select
           name="mealType"
           value={formData.mealType}
           onChange={handleChange}
-          className="input-field select-field"
+          className="input-field select-field" required
         >
           <option value="">Select Meal Type</option>
           <option value="vegetarian">Vegetarian</option>
@@ -86,14 +86,14 @@ const MealPlanForm = () => {
           name="ingredients"
           value={formData.ingredients}
           onChange={handleChange}
-          className="input-field textarea-field"
-        ></textarea>
+          className="input-field textarea-field" required
+        ></textarea> 
         <textarea
           placeholder="Instructions"
           name="instructions"
           value={formData.instructions}
           onChange={handleChange}
-          className="input-field textarea-field"
+          className="input-field textarea-field" required
         ></textarea>
         <button type="submit" className="submit-btn">Create</button>
       </form>
